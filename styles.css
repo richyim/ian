@@ -33,6 +33,7 @@ a {
   color: white;
 }
 
+/*
 .icon-envelope::before {
   content: '';
   display: inline-block;
@@ -74,6 +75,54 @@ a {
 
 .icon-phone::before {
   /* Additional phone styling to create the handset */
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  width: 14px;
+  height: 10px;
+  background: yellow;
+  border-radius: 10px;
+}
+
+*/
+
+.icon-envelope::before, .icon-phone::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle; /* Align the icons with the text */
+  margin-right: 8px;
+  position: relative;
+}
+
+.icon-envelope::before {
+  width: 20px;
+  height: 15px;
+  background-color: yellow;
+  border-top: 2px solid darkkhaki;
+  border-bottom: 2px solid darkkhaki;
+}
+
+.icon-envelope::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: yellow;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.icon-phone::before {
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  border-radius: 50%;
+  box-shadow: inset 5px -5px 0 0 darkkhaki;
+}
+
+.icon-phone::after {
   content: '';
   position: absolute;
   top: 5px;
