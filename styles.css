@@ -32,3 +32,54 @@ a {
   text-decoration: none;
   color: white;
 }
+
+.icon-envelope::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 15px;
+  background-color: yellow;
+  margin-right: 8px;
+  position: relative;
+  top: 3px;
+  /* Envelope styling */
+  border-top: 2px solid darkkhaki;
+  border-bottom: 2px solid darkkhaki;
+}
+
+.icon-envelope::before {
+  /* Additional envelope styling to create the flap */
+  content: '';
+  position: absolute;
+  top: -2px; /* Adjust this value to overlap the border */
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: yellow;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.icon-phone::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  margin-right: 8px;
+  position: relative;
+  /* Phone styling */
+  border-radius: 50%;
+  box-shadow: inset 5px -5px 0 0 darkkhaki;
+}
+
+.icon-phone::before {
+  /* Additional phone styling to create the handset */
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  width: 14px;
+  height: 10px;
+  background: yellow;
+  border-radius: 10px;
+}
